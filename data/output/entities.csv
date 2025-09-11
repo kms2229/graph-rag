@@ -1,0 +1,91 @@
+entity_id,text,label
+22,22,CARDINAL
+4,4,CARDINAL
+1 3 1,1 3 1,CARDINAL
+the uconn health animal care and use committee,the UConn Health Animal Care and Use Committee,ORG
+"1-, 6-","1-, 6-",DATE
+12-,12-,DATE
+24-month-old,24-month-old,DATE
+5,5,CARDINAL
+24 hours,24 hours,TIME
+10%,10%,PERCENT
+30%,30%,PERCENT
+overnight,overnight,TIME
+thermo shandon,Thermo Shandon,GPE
+pittsburgh,Pittsburgh,GPE
+pa,PA,GPE
+5-7,5-7,DATE
+leica cryostat,Leica Cryostat,PERSON
+nussloch,Nussloch,GPE
+germany,Germany,GPE
+immunofluorescence,Immunofluorescence,PERSON
+first,first,ORDINAL
+pbs,PBS,ORG
+10 minutes,10 minutes,TIME
+the universal blocking reagent,the Universal Blocking Reagent,LAW
+biogenex,BioGenex,GPE
+fremont,Fremont,GPE
+fgf9,FGF9,ORG
+carlsbad,Carlsbad,GPE
+abcam,Abcam,GPE
+cambridge,Cambridge,GPE
+uk,UK,GPE
++4 \u00b0c. phosphospecific,+4 \u00b0C. Phosphospecific,ORG
+fgfr1,FGFR1,ORG
+fgfr3,FGFR3,ORG
+donkey,Donkey,LOC
+igg,IgG,ORG
+"jackson immunoresearch laboratories, inc.","Jackson ImmunoResearch Laboratories, Inc.",ORG
+west grove,West Grove,GPE
+1 hour,1 hour,TIME
+50%,50%,PERCENT
+hoechst,Hoechst,ORG
+life technologies,Life Technologies,ORG
+1,1,CARDINAL
+national institutes of health,National Institutes of Health,ORG
+bethesda,Bethesda,GPE
+md,MD,GPE
+three,Three,CARDINAL
+mcc,MCC,ORG
+tmj,TMJ,ORG
+supplementary fig,Supplementary Fig,PERSON
+2,2,CARDINAL
+fig,Fig,PERSON
+2 5,2 5,CARDINAL
+2 fgf2,2 FGF2,CARDINAL
+1-month-old,1-month-old,DATE
+figs,Figs,PERSON
+2a,2A,PRODUCT
+fgf,FGF,ORG
+histograms,Histograms,PERSON
+6-month-old,6-month-old,DATE
+12 months,12 months,DATE
+1b,1B,CARDINAL
+6 months,6 months,DATE
+2d,2D,DATE
+1-,1-,DATE
+1e,1E,CARDINAL
+2e,2E,CARDINAL
+6 months of age,6 months of age,DATE
+phospho-fgfr3,Phospho-FGFR3,ORG
+"12-,18-","12-,18-",CARDINAL
+fgfr,FGFR,ORG
+4 fgf2,4 FGF2,CARDINAL
+6 8 9 10,6 8 9 10,TIME
+10 10 11 fgf8,10 10 11 FGF8,TIME
+12,12,CARDINAL
+13,13,CARDINAL
+14 15,14 15,CARDINAL
+chondrogenic potential,chondrogenic potential,ORG
+11 one,11 One,CARDINAL
+rna,RNA,ORG
+\u2013 supplemental,\u2013 Supplemental,ORG
+fgf ligands,FGF Ligands,PERSON
+the temporomandibular joint in young and aging mice supplemental,the Temporomandibular Joint in Young and Aging Mice Supplemental,ORG
+the temporomandibular joint in young and aging mice,the Temporomandibular Joint in Young and Aging Mice,ORG
+eliane h. dutra,Eliane H. Dutra,PERSON
+po-jung chen,Po-Jung Chen,PERSON
+zana kalajzic,Zana Kalajzic,PERSON
+sunil wadhwa,Sunil Wadhwa,PERSON
+marja hurley,Marja Hurley,PERSON
+sumit yadav,Sumit Yadav,PERSON

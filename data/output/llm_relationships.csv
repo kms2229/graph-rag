@@ -1,0 +1,167 @@
+source,source_type,target,target_type,relation
+The,ORG,##rm,LOC,related_to
+The,ORG,Shandon,LOC,related_to
+The,ORG,Pittsburgh,LOC,related_to
+The,ORG,PA,LOC,related_to
+##rm,LOC,The,ORG,related_to
+##rm,LOC,Shandon,LOC,related_to
+##rm,LOC,Pittsburgh,LOC,related_to
+##rm,LOC,PA,LOC,related_to
+Shandon,LOC,The,ORG,related_to
+Shandon,LOC,##rm,LOC,related_to
+Shandon,LOC,Pittsburgh,LOC,related_to
+Shandon,LOC,PA,LOC,related_to
+Pittsburgh,LOC,The,ORG,related_to
+Pittsburgh,LOC,##rm,LOC,related_to
+Pittsburgh,LOC,Shandon,LOC,related_to
+Pittsburgh,LOC,PA,LOC,related_to
+PA,LOC,The,ORG,related_to
+PA,LOC,##rm,LOC,related_to
+PA,LOC,Shandon,LOC,related_to
+PA,LOC,Pittsburgh,LOC,related_to
+Le,ORG,Cryost,ORG,related_to
+Le,ORG,N,LOC,related_to
+Le,ORG,##ussloch,LOC,related_to
+Le,ORG,Germany,LOC,related_to
+Cryost,ORG,Le,ORG,related_to
+Cryost,ORG,N,LOC,related_to
+Cryost,ORG,##ussloch,LOC,related_to
+Cryost,ORG,Germany,LOC,related_to
+N,LOC,Le,ORG,related_to
+N,LOC,Cryost,ORG,related_to
+N,LOC,##ussloch,LOC,related_to
+N,LOC,Germany,LOC,related_to
+##ussloch,LOC,Le,ORG,related_to
+##ussloch,LOC,Cryost,ORG,related_to
+##ussloch,LOC,N,LOC,related_to
+##ussloch,LOC,Germany,LOC,related_to
+Germany,LOC,Le,ORG,related_to
+Germany,LOC,Cryost,ORG,related_to
+Germany,LOC,N,LOC,related_to
+Germany,LOC,##ussloch,LOC,related_to
+PBS,ORG,Universal Blocking,MISC,related_to
+PBS,ORG,Re,ORG,related_to
+PBS,ORG,B,ORG,related_to
+PBS,ORG,##ioG,ORG,related_to
+Universal Blocking,MISC,PBS,ORG,related_to
+Universal Blocking,MISC,Re,ORG,related_to
+Universal Blocking,MISC,B,ORG,related_to
+Universal Blocking,MISC,##ioG,ORG,related_to
+Universal Blocking,MISC,##x,ORG,related_to
+Universal Blocking,MISC,Fremont,LOC,related_to
+Universal Blocking,MISC,CA,LOC,related_to
+Re,ORG,PBS,ORG,related_to
+Re,ORG,Universal Blocking,MISC,related_to
+Re,ORG,B,ORG,related_to
+Re,ORG,##ioG,ORG,related_to
+Re,ORG,##x,ORG,related_to
+Re,ORG,Fremont,LOC,related_to
+Re,ORG,CA,LOC,related_to
+Re,ORG,The,ORG,related_to
+Re,ORG,##rmo Fisher Scientific,ORG,related_to
+B,ORG,PBS,ORG,related_to
+B,ORG,Universal Blocking,MISC,related_to
+B,ORG,Re,ORG,related_to
+B,ORG,##ioG,ORG,related_to
+B,ORG,##x,ORG,related_to
+B,ORG,Fremont,LOC,related_to
+B,ORG,CA,LOC,related_to
+B,ORG,The,ORG,related_to
+B,ORG,##rmo Fisher Scientific,ORG,related_to
+##ioG,ORG,PBS,ORG,related_to
+##ioG,ORG,Universal Blocking,MISC,related_to
+##ioG,ORG,Re,ORG,related_to
+##ioG,ORG,B,ORG,related_to
+##ioG,ORG,##x,ORG,related_to
+##ioG,ORG,Fremont,LOC,related_to
+##ioG,ORG,CA,LOC,related_to
+##ioG,ORG,The,ORG,related_to
+##ioG,ORG,##rmo Fisher Scientific,ORG,related_to
+##x,ORG,Universal Blocking,MISC,related_to
+##x,ORG,Re,ORG,related_to
+##x,ORG,B,ORG,related_to
+##x,ORG,##ioG,ORG,related_to
+##x,ORG,Fremont,LOC,related_to
+##x,ORG,CA,LOC,related_to
+##x,ORG,The,ORG,related_to
+##x,ORG,##rmo Fisher Scientific,ORG,related_to
+Fremont,LOC,Universal Blocking,MISC,related_to
+Fremont,LOC,Re,ORG,related_to
+Fremont,LOC,B,ORG,related_to
+Fremont,LOC,##ioG,ORG,related_to
+Fremont,LOC,##x,ORG,related_to
+Fremont,LOC,CA,LOC,related_to
+Fremont,LOC,The,ORG,related_to
+Fremont,LOC,##rmo Fisher Scientific,ORG,related_to
+CA,LOC,Universal Blocking,MISC,related_to
+CA,LOC,Re,ORG,related_to
+CA,LOC,B,ORG,related_to
+CA,LOC,##ioG,ORG,related_to
+CA,LOC,##x,ORG,related_to
+CA,LOC,Fremont,LOC,related_to
+CA,LOC,The,ORG,related_to
+CA,LOC,##rmo Fisher Scientific,ORG,related_to
+CA,LOC,Carlsbad,LOC,related_to
+The,ORG,Re,ORG,related_to
+The,ORG,B,ORG,related_to
+The,ORG,##ioG,ORG,related_to
+The,ORG,##x,ORG,related_to
+The,ORG,Fremont,LOC,related_to
+The,ORG,CA,LOC,related_to
+The,ORG,##rmo Fisher Scientific,ORG,related_to
+The,ORG,Carlsbad,LOC,related_to
+The,ORG,CA,LOC,related_to
+The,ORG,A,ORG,related_to
+The,ORG,Cambridge,LOC,related_to
+The,ORG,UK,LOC,related_to
+##rmo Fisher Scientific,ORG,Re,ORG,related_to
+##rmo Fisher Scientific,ORG,B,ORG,related_to
+##rmo Fisher Scientific,ORG,##ioG,ORG,related_to
+##rmo Fisher Scientific,ORG,##x,ORG,related_to
+##rmo Fisher Scientific,ORG,Fremont,LOC,related_to
+##rmo Fisher Scientific,ORG,CA,LOC,related_to
+##rmo Fisher Scientific,ORG,The,ORG,related_to
+##rmo Fisher Scientific,ORG,Carlsbad,LOC,related_to
+##rmo Fisher Scientific,ORG,CA,LOC,related_to
+##rmo Fisher Scientific,ORG,A,ORG,related_to
+##rmo Fisher Scientific,ORG,Cambridge,LOC,related_to
+##rmo Fisher Scientific,ORG,UK,LOC,related_to
+Carlsbad,LOC,CA,LOC,related_to
+Carlsbad,LOC,The,ORG,related_to
+Carlsbad,LOC,##rmo Fisher Scientific,ORG,related_to
+Carlsbad,LOC,CA,LOC,related_to
+Carlsbad,LOC,A,ORG,related_to
+Carlsbad,LOC,Cambridge,LOC,related_to
+Carlsbad,LOC,UK,LOC,related_to
+CA,LOC,The,ORG,related_to
+CA,LOC,##rmo Fisher Scientific,ORG,related_to
+CA,LOC,Carlsbad,LOC,related_to
+CA,LOC,A,ORG,related_to
+CA,LOC,Cambridge,LOC,related_to
+CA,LOC,UK,LOC,related_to
+A,ORG,The,ORG,related_to
+A,ORG,##rmo Fisher Scientific,ORG,related_to
+A,ORG,Carlsbad,LOC,related_to
+A,ORG,CA,LOC,related_to
+A,ORG,Cambridge,LOC,related_to
+A,ORG,UK,LOC,related_to
+Cambridge,LOC,The,ORG,related_to
+Cambridge,LOC,##rmo Fisher Scientific,ORG,related_to
+Cambridge,LOC,Carlsbad,LOC,related_to
+Cambridge,LOC,CA,LOC,related_to
+Cambridge,LOC,A,ORG,related_to
+Cambridge,LOC,UK,LOC,related_to
+UK,LOC,The,ORG,related_to
+UK,LOC,##rmo Fisher Scientific,ORG,related_to
+UK,LOC,Carlsbad,LOC,related_to
+UK,LOC,CA,LOC,related_to
+UK,LOC,A,ORG,related_to
+UK,LOC,Cambridge,LOC,related_to
+Jackson,ORG,Laboratories,ORG,related_to
+Jackson,ORG,Inc,ORG,related_to
+Laboratories,ORG,Jackson,ORG,related_to
+Laboratories,ORG,Inc,ORG,related_to
+Inc,ORG,Jackson,ORG,related_to
+Inc,ORG,Laboratories,ORG,related_to
+Technologies,ORG,Carl,ORG,related_to
+Carl,ORG,Technologies,ORG,related_to

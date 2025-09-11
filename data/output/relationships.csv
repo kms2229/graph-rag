@@ -1,0 +1,299 @@
+source,source_type,target,target_type,relation
+22,CARDINAL,4,CARDINAL,co-occurs_with
+4,CARDINAL,22,CARDINAL,co-occurs_with
+1 3 1,CARDINAL,the UConn Health Animal Care and Use Committee,ORG,co-occurs_with
+the UConn Health Animal Care and Use Committee,ORG,1 3 1,CARDINAL,co-occurs_with
+"1-, 6-",DATE,12-,DATE,co-occurs_with
+"1-, 6-",DATE,24-month-old,DATE,co-occurs_with
+12-,DATE,"1-, 6-",DATE,co-occurs_with
+12-,DATE,24-month-old,DATE,co-occurs_with
+24-month-old,DATE,"1-, 6-",DATE,co-occurs_with
+24-month-old,DATE,12-,DATE,co-occurs_with
+24-month-old,DATE,5,CARDINAL,co-occurs_with
+5,CARDINAL,24-month-old,DATE,co-occurs_with
+24 hours,TIME,10%,PERCENT,co-occurs_with
+24 hours,TIME,30%,PERCENT,co-occurs_with
+10%,PERCENT,24 hours,TIME,co-occurs_with
+10%,PERCENT,30%,PERCENT,co-occurs_with
+10%,PERCENT,overnight,TIME,co-occurs_with
+30%,PERCENT,24 hours,TIME,co-occurs_with
+30%,PERCENT,10%,PERCENT,co-occurs_with
+30%,PERCENT,overnight,TIME,co-occurs_with
+30%,PERCENT,Thermo Shandon,GPE,co-occurs_with
+overnight,TIME,10%,PERCENT,co-occurs_with
+overnight,TIME,30%,PERCENT,co-occurs_with
+overnight,TIME,Thermo Shandon,GPE,co-occurs_with
+overnight,TIME,Pittsburgh,GPE,co-occurs_with
+Thermo Shandon,GPE,30%,PERCENT,co-occurs_with
+Thermo Shandon,GPE,overnight,TIME,co-occurs_with
+Thermo Shandon,GPE,Pittsburgh,GPE,co-occurs_with
+Thermo Shandon,GPE,PA,GPE,co-occurs_with
+Pittsburgh,GPE,overnight,TIME,co-occurs_with
+Pittsburgh,GPE,Thermo Shandon,GPE,co-occurs_with
+Pittsburgh,GPE,PA,GPE,co-occurs_with
+PA,GPE,Thermo Shandon,GPE,co-occurs_with
+PA,GPE,Pittsburgh,GPE,co-occurs_with
+Leica Cryostat,PERSON,Nussloch,GPE,co-occurs_with
+Leica Cryostat,PERSON,Germany,GPE,co-occurs_with
+Nussloch,GPE,Leica Cryostat,PERSON,co-occurs_with
+Nussloch,GPE,Germany,GPE,co-occurs_with
+Germany,GPE,Leica Cryostat,PERSON,co-occurs_with
+Germany,GPE,Nussloch,GPE,co-occurs_with
+Immunofluorescence,PERSON,first,ORDINAL,co-occurs_with
+first,ORDINAL,Immunofluorescence,PERSON,co-occurs_with
+first,ORDINAL,PBS,ORG,co-occurs_with
+PBS,ORG,first,ORDINAL,co-occurs_with
+PBS,ORG,10 minutes,TIME,co-occurs_with
+10 minutes,TIME,PBS,ORG,co-occurs_with
+10 minutes,TIME,the Universal Blocking Reagent,LAW,co-occurs_with
+the Universal Blocking Reagent,LAW,10 minutes,TIME,co-occurs_with
+the Universal Blocking Reagent,LAW,BioGenex,GPE,co-occurs_with
+the Universal Blocking Reagent,LAW,Fremont,GPE,co-occurs_with
+BioGenex,GPE,the Universal Blocking Reagent,LAW,co-occurs_with
+BioGenex,GPE,Fremont,GPE,co-occurs_with
+Fremont,GPE,the Universal Blocking Reagent,LAW,co-occurs_with
+Fremont,GPE,BioGenex,GPE,co-occurs_with
+Abcam,GPE,Cambridge,GPE,co-occurs_with
+Abcam,GPE,UK,GPE,co-occurs_with
+Cambridge,GPE,Abcam,GPE,co-occurs_with
+Cambridge,GPE,UK,GPE,co-occurs_with
+UK,GPE,Abcam,GPE,co-occurs_with
+UK,GPE,Cambridge,GPE,co-occurs_with
+overnight,TIME,+4 \u00b0C. Phosphospecific,ORG,co-occurs_with
+overnight,TIME,FGFR1,ORG,co-occurs_with
+overnight,TIME,FGFR3,ORG,co-occurs_with
++4 \u00b0C. Phosphospecific,ORG,overnight,TIME,co-occurs_with
++4 \u00b0C. Phosphospecific,ORG,FGFR1,ORG,co-occurs_with
++4 \u00b0C. Phosphospecific,ORG,FGFR3,ORG,co-occurs_with
+FGFR1,ORG,overnight,TIME,co-occurs_with
+FGFR1,ORG,+4 \u00b0C. Phosphospecific,ORG,co-occurs_with
+FGFR1,ORG,FGFR3,ORG,co-occurs_with
+FGFR3,ORG,overnight,TIME,co-occurs_with
+FGFR3,ORG,+4 \u00b0C. Phosphospecific,ORG,co-occurs_with
+FGFR3,ORG,FGFR1,ORG,co-occurs_with
+PBS,ORG,Donkey,LOC,co-occurs_with
+PBS,ORG,IgG,ORG,co-occurs_with
+Donkey,LOC,PBS,ORG,co-occurs_with
+Donkey,LOC,IgG,ORG,co-occurs_with
+Donkey,LOC,"Jackson ImmunoResearch Laboratories, Inc.",ORG,co-occurs_with
+IgG,ORG,PBS,ORG,co-occurs_with
+IgG,ORG,Donkey,LOC,co-occurs_with
+IgG,ORG,"Jackson ImmunoResearch Laboratories, Inc.",ORG,co-occurs_with
+IgG,ORG,West Grove,GPE,co-occurs_with
+"Jackson ImmunoResearch Laboratories, Inc.",ORG,Donkey,LOC,co-occurs_with
+"Jackson ImmunoResearch Laboratories, Inc.",ORG,IgG,ORG,co-occurs_with
+"Jackson ImmunoResearch Laboratories, Inc.",ORG,West Grove,GPE,co-occurs_with
+West Grove,GPE,IgG,ORG,co-occurs_with
+West Grove,GPE,"Jackson ImmunoResearch Laboratories, Inc.",ORG,co-occurs_with
+50%,PERCENT,PBS,ORG,co-occurs_with
+50%,PERCENT,Hoechst,ORG,co-occurs_with
+PBS,ORG,50%,PERCENT,co-occurs_with
+PBS,ORG,Hoechst,ORG,co-occurs_with
+PBS,ORG,Life Technologies,ORG,co-occurs_with
+PBS,ORG,Carlsbad,GPE,co-occurs_with
+Hoechst,ORG,50%,PERCENT,co-occurs_with
+Hoechst,ORG,PBS,ORG,co-occurs_with
+Hoechst,ORG,Life Technologies,ORG,co-occurs_with
+Hoechst,ORG,Carlsbad,GPE,co-occurs_with
+Life Technologies,ORG,PBS,ORG,co-occurs_with
+Life Technologies,ORG,Hoechst,ORG,co-occurs_with
+Life Technologies,ORG,Carlsbad,GPE,co-occurs_with
+Carlsbad,GPE,PBS,ORG,co-occurs_with
+Carlsbad,GPE,Hoechst,ORG,co-occurs_with
+Carlsbad,GPE,Life Technologies,ORG,co-occurs_with
+National Institutes of Health,ORG,Bethesda,GPE,co-occurs_with
+National Institutes of Health,ORG,MD,GPE,co-occurs_with
+Bethesda,GPE,National Institutes of Health,ORG,co-occurs_with
+Bethesda,GPE,MD,GPE,co-occurs_with
+MD,GPE,National Institutes of Health,ORG,co-occurs_with
+MD,GPE,Bethesda,GPE,co-occurs_with
+first,ORDINAL,MCC,ORG,co-occurs_with
+first,ORDINAL,TMJ,ORG,co-occurs_with
+MCC,ORG,first,ORDINAL,co-occurs_with
+MCC,ORG,TMJ,ORG,co-occurs_with
+TMJ,ORG,first,ORDINAL,co-occurs_with
+TMJ,ORG,MCC,ORG,co-occurs_with
+4,CARDINAL,Supplementary Fig,PERSON,co-occurs_with
+4,CARDINAL,2,CARDINAL,co-occurs_with
+4,CARDINAL,Fig,PERSON,co-occurs_with
+4,CARDINAL,2 5,CARDINAL,co-occurs_with
+Supplementary Fig,PERSON,4,CARDINAL,co-occurs_with
+Supplementary Fig,PERSON,2,CARDINAL,co-occurs_with
+Supplementary Fig,PERSON,Fig,PERSON,co-occurs_with
+Supplementary Fig,PERSON,2 5,CARDINAL,co-occurs_with
+2,CARDINAL,4,CARDINAL,co-occurs_with
+2,CARDINAL,Supplementary Fig,PERSON,co-occurs_with
+2,CARDINAL,Fig,PERSON,co-occurs_with
+2,CARDINAL,2 5,CARDINAL,co-occurs_with
+2,CARDINAL,Fig,PERSON,co-occurs_with
+Fig,PERSON,4,CARDINAL,co-occurs_with
+Fig,PERSON,Supplementary Fig,PERSON,co-occurs_with
+Fig,PERSON,2,CARDINAL,co-occurs_with
+Fig,PERSON,2 5,CARDINAL,co-occurs_with
+Fig,PERSON,Fig,PERSON,co-occurs_with
+Fig,PERSON,2 FGF2,CARDINAL,co-occurs_with
+2 5,CARDINAL,4,CARDINAL,co-occurs_with
+2 5,CARDINAL,Supplementary Fig,PERSON,co-occurs_with
+2 5,CARDINAL,2,CARDINAL,co-occurs_with
+2 5,CARDINAL,Fig,PERSON,co-occurs_with
+2 5,CARDINAL,Fig,PERSON,co-occurs_with
+2 5,CARDINAL,2 FGF2,CARDINAL,co-occurs_with
+Fig,PERSON,2,CARDINAL,co-occurs_with
+Fig,PERSON,Fig,PERSON,co-occurs_with
+Fig,PERSON,2 5,CARDINAL,co-occurs_with
+Fig,PERSON,2 FGF2,CARDINAL,co-occurs_with
+2 FGF2,CARDINAL,Fig,PERSON,co-occurs_with
+2 FGF2,CARDINAL,2 5,CARDINAL,co-occurs_with
+2 FGF2,CARDINAL,Fig,PERSON,co-occurs_with
+2 FGF2,CARDINAL,TMJ,ORG,co-occurs_with
+TMJ,ORG,2 FGF2,CARDINAL,co-occurs_with
+TMJ,ORG,1-month-old,DATE,co-occurs_with
+1-month-old,DATE,TMJ,ORG,co-occurs_with
+Figs,PERSON,2A,PRODUCT,co-occurs_with
+Figs,PERSON,1,CARDINAL,co-occurs_with
+2A,PRODUCT,Figs,PERSON,co-occurs_with
+2A,PRODUCT,1,CARDINAL,co-occurs_with
+1,CARDINAL,Figs,PERSON,co-occurs_with
+1,CARDINAL,2A,PRODUCT,co-occurs_with
+2,CARDINAL,FGF,ORG,co-occurs_with
+FGF,ORG,2,CARDINAL,co-occurs_with
+MCC,ORG,6-month-old,DATE,co-occurs_with
+6-month-old,DATE,MCC,ORG,co-occurs_with
+12 months,DATE,MCC,ORG,co-occurs_with
+MCC,ORG,12 months,DATE,co-occurs_with
+MCC,ORG,Figs,PERSON,co-occurs_with
+MCC,ORG,1B,CARDINAL,co-occurs_with
+Figs,PERSON,MCC,ORG,co-occurs_with
+Figs,PERSON,1B,CARDINAL,co-occurs_with
+1B,CARDINAL,MCC,ORG,co-occurs_with
+1B,CARDINAL,Figs,PERSON,co-occurs_with
+1B,CARDINAL,MCC,ORG,co-occurs_with
+MCC,ORG,1B,CARDINAL,co-occurs_with
+MCC,ORG,1-month-old,DATE,co-occurs_with
+1-month-old,DATE,MCC,ORG,co-occurs_with
+6 months,DATE,FGF9,ORG,co-occurs_with
+FGF9,ORG,6 months,DATE,co-occurs_with
+12-,DATE,24-month-old,DATE,co-occurs_with
+24-month-old,DATE,12-,DATE,co-occurs_with
+24-month-old,DATE,Figs,PERSON,co-occurs_with
+Figs,PERSON,24-month-old,DATE,co-occurs_with
+MCC,ORG,1-month-old,DATE,co-occurs_with
+1-month-old,DATE,MCC,ORG,co-occurs_with
+TMJ,ORG,Figs,PERSON,co-occurs_with
+TMJ,ORG,2D,DATE,co-occurs_with
+Figs,PERSON,TMJ,ORG,co-occurs_with
+Figs,PERSON,2D,DATE,co-occurs_with
+2D,DATE,TMJ,ORG,co-occurs_with
+2D,DATE,Figs,PERSON,co-occurs_with
+2D,DATE,1-,DATE,co-occurs_with
+1-,DATE,2D,DATE,co-occurs_with
+1-,DATE,6-month-old,DATE,co-occurs_with
+6-month-old,DATE,1-,DATE,co-occurs_with
+24-month-old,DATE,Figs,PERSON,co-occurs_with
+24-month-old,DATE,1E,CARDINAL,co-occurs_with
+Figs,PERSON,24-month-old,DATE,co-occurs_with
+Figs,PERSON,1E,CARDINAL,co-occurs_with
+Figs,PERSON,2E,CARDINAL,co-occurs_with
+1E,CARDINAL,24-month-old,DATE,co-occurs_with
+1E,CARDINAL,Figs,PERSON,co-occurs_with
+1E,CARDINAL,2E,CARDINAL,co-occurs_with
+2E,CARDINAL,Figs,PERSON,co-occurs_with
+2E,CARDINAL,1E,CARDINAL,co-occurs_with
+6 months of age,DATE,Phospho-FGFR3,ORG,co-occurs_with
+Phospho-FGFR3,ORG,6 months of age,DATE,co-occurs_with
+"12-,18-",CARDINAL,24-month-old,DATE,co-occurs_with
+24-month-old,DATE,"12-,18-",CARDINAL,co-occurs_with
+24-month-old,DATE,Figs,PERSON,co-occurs_with
+Figs,PERSON,24-month-old,DATE,co-occurs_with
+FGF,ORG,FGFR,ORG,co-occurs_with
+FGFR,ORG,FGF,ORG,co-occurs_with
+FGFR,ORG,TMJ,ORG,co-occurs_with
+TMJ,ORG,FGFR,ORG,co-occurs_with
+FGF,ORG,FGFR,ORG,co-occurs_with
+FGFR,ORG,FGF,ORG,co-occurs_with
+4 FGF2,CARDINAL,FGF9,ORG,co-occurs_with
+FGF9,ORG,4 FGF2,CARDINAL,co-occurs_with
+FGF,ORG,FGFR1,ORG,co-occurs_with
+FGFR1,ORG,FGF,ORG,co-occurs_with
+12,CARDINAL,13,CARDINAL,co-occurs_with
+12,CARDINAL,FGF9,ORG,co-occurs_with
+13,CARDINAL,12,CARDINAL,co-occurs_with
+13,CARDINAL,FGF9,ORG,co-occurs_with
+FGF9,ORG,12,CARDINAL,co-occurs_with
+FGF9,ORG,13,CARDINAL,co-occurs_with
+FGF9,ORG,14 15,CARDINAL,co-occurs_with
+14 15,CARDINAL,FGF9,ORG,co-occurs_with
+FGFR3,ORG,chondrogenic potential,ORG,co-occurs_with
+chondrogenic potential,ORG,FGFR3,ORG,co-occurs_with
+chondrogenic potential,ORG,11 One,CARDINAL,co-occurs_with
+11 One,CARDINAL,chondrogenic potential,ORG,co-occurs_with
+FGF,ORG,MCC,ORG,co-occurs_with
+MCC,ORG,FGF,ORG,co-occurs_with
+MCC,ORG,RNA,ORG,co-occurs_with
+RNA,ORG,MCC,ORG,co-occurs_with
+TMJ,ORG,\u2013 Supplemental,ORG,co-occurs_with
+\u2013 Supplemental,ORG,TMJ,ORG,co-occurs_with
+\u2013 Supplemental,ORG,FGF Ligands,PERSON,co-occurs_with
+FGF Ligands,PERSON,\u2013 Supplemental,ORG,co-occurs_with
+FGF Ligands,PERSON,the Temporomandibular Joint in Young and Aging Mice Supplemental,ORG,co-occurs_with
+the Temporomandibular Joint in Young and Aging Mice Supplemental,ORG,FGF Ligands,PERSON,co-occurs_with
+FGF Ligands,PERSON,the Temporomandibular Joint in Young and Aging Mice,ORG,co-occurs_with
+the Temporomandibular Joint in Young and Aging Mice,ORG,FGF Ligands,PERSON,co-occurs_with
+the Temporomandibular Joint in Young and Aging Mice,ORG,Eliane H. Dutra,PERSON,co-occurs_with
+Eliane H. Dutra,PERSON,the Temporomandibular Joint in Young and Aging Mice,ORG,co-occurs_with
+Eliane H. Dutra,PERSON,Po-Jung Chen,PERSON,co-occurs_with
+Eliane H. Dutra,PERSON,Zana Kalajzic,PERSON,co-occurs_with
+Po-Jung Chen,PERSON,Eliane H. Dutra,PERSON,co-occurs_with
+Po-Jung Chen,PERSON,Zana Kalajzic,PERSON,co-occurs_with
+Po-Jung Chen,PERSON,Sunil Wadhwa,PERSON,co-occurs_with
+Zana Kalajzic,PERSON,Eliane H. Dutra,PERSON,co-occurs_with
+Zana Kalajzic,PERSON,Po-Jung Chen,PERSON,co-occurs_with
+Zana Kalajzic,PERSON,Sunil Wadhwa,PERSON,co-occurs_with
+Zana Kalajzic,PERSON,Marja Hurley,PERSON,co-occurs_with
+Zana Kalajzic,PERSON,Sumit Yadav,PERSON,co-occurs_with
+Sunil Wadhwa,PERSON,Po-Jung Chen,PERSON,co-occurs_with
+Sunil Wadhwa,PERSON,Zana Kalajzic,PERSON,co-occurs_with
+Sunil Wadhwa,PERSON,Marja Hurley,PERSON,co-occurs_with
+Sunil Wadhwa,PERSON,Sumit Yadav,PERSON,co-occurs_with
+Marja Hurley,PERSON,Zana Kalajzic,PERSON,co-occurs_with
+Marja Hurley,PERSON,Sunil Wadhwa,PERSON,co-occurs_with
+Marja Hurley,PERSON,Sumit Yadav,PERSON,co-occurs_with
+Sumit Yadav,PERSON,Zana Kalajzic,PERSON,co-occurs_with
+Sumit Yadav,PERSON,Sunil Wadhwa,PERSON,co-occurs_with
+Sumit Yadav,PERSON,Marja Hurley,PERSON,co-occurs_with
+Sumit Yadav,PERSON,\u2013 Supplemental,ORG,co-occurs_with
+\u2013 Supplemental,ORG,Sumit Yadav,PERSON,co-occurs_with
+\u2013 Supplemental,ORG,FGF Ligands,PERSON,co-occurs_with
+FGF Ligands,PERSON,\u2013 Supplemental,ORG,co-occurs_with
+FGF Ligands,PERSON,the Temporomandibular Joint in Young and Aging Mice Supplemental,ORG,co-occurs_with
+the Temporomandibular Joint in Young and Aging Mice Supplemental,ORG,FGF Ligands,PERSON,co-occurs_with
+FGF Ligands,PERSON,the Temporomandibular Joint in Young and Aging Mice,ORG,co-occurs_with
+the Temporomandibular Joint in Young and Aging Mice,ORG,FGF Ligands,PERSON,co-occurs_with
+the Temporomandibular Joint in Young and Aging Mice,ORG,Eliane H. Dutra,PERSON,co-occurs_with
+Eliane H. Dutra,PERSON,the Temporomandibular Joint in Young and Aging Mice,ORG,co-occurs_with
+Eliane H. Dutra,PERSON,Po-Jung Chen,PERSON,co-occurs_with
+Eliane H. Dutra,PERSON,Zana Kalajzic,PERSON,co-occurs_with
+Po-Jung Chen,PERSON,Eliane H. Dutra,PERSON,co-occurs_with
+Po-Jung Chen,PERSON,Zana Kalajzic,PERSON,co-occurs_with
+Po-Jung Chen,PERSON,Sunil Wadhwa,PERSON,co-occurs_with
+Zana Kalajzic,PERSON,Eliane H. Dutra,PERSON,co-occurs_with
+Zana Kalajzic,PERSON,Po-Jung Chen,PERSON,co-occurs_with
+Zana Kalajzic,PERSON,Sunil Wadhwa,PERSON,co-occurs_with
+Zana Kalajzic,PERSON,Marja Hurley,PERSON,co-occurs_with
+Zana Kalajzic,PERSON,Sumit Yadav,PERSON,co-occurs_with
+Sunil Wadhwa,PERSON,Po-Jung Chen,PERSON,co-occurs_with
+Sunil Wadhwa,PERSON,Zana Kalajzic,PERSON,co-occurs_with
+Sunil Wadhwa,PERSON,Marja Hurley,PERSON,co-occurs_with
+Sunil Wadhwa,PERSON,Sumit Yadav,PERSON,co-occurs_with
+Marja Hurley,PERSON,Zana Kalajzic,PERSON,co-occurs_with
+Marja Hurley,PERSON,Sunil Wadhwa,PERSON,co-occurs_with
+Marja Hurley,PERSON,Sumit Yadav,PERSON,co-occurs_with
+Sumit Yadav,PERSON,Zana Kalajzic,PERSON,co-occurs_with
+Sumit Yadav,PERSON,Sunil Wadhwa,PERSON,co-occurs_with
+Sumit Yadav,PERSON,Marja Hurley,PERSON,co-occurs_with
+Histograms,SUBJECT,means,OBJECT,represent
+study,SUBJECT,expression,OBJECT,characterizes
+FGF2,SUBJECT,FGFs,OBJECT,secreted
+It,SUBJECT,proliferation,OBJECT,demonstrated
+studies,SUBJECT,mice,OBJECT,include
+data,SUBJECT,role,OBJECT,suggest

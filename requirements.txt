@@ -1,0 +1,27 @@
+# Core dependencies
+networkx==3.1
+spacy==3.7.2
+numpy==1.24.3
+pandas==2.0.3
+
+# Graph database
+neo4j==5.14.1
+
+# Vector embeddings
+sentence-transformers==2.2.2
+
+# RAG components
+langchain==0.0.335
+langchain-community==0.0.13
+
+# Visualization
+matplotlib==3.7.3
+pyvis==0.3.2
+
+# Web interface
+streamlit==1.29.0
+streamlit-agraph==0.0.45
+
+# Utilities
+tqdm==4.66.1
+python-dotenv==1.0.0
