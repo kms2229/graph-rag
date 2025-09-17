@@ -44,7 +44,11 @@ class Neo4jDatabase:
                 self.driver = GraphDatabase.driver(self.uri, auth=(self.user, self.password))
                 
             # Test connection
-            with self.driver.session() as session:
+            session_params = {}
+            if self.database:
+                session_params['database'] = self.database
+                
+            with self.driver.session(**session_params) as session:
                 session.run("RETURN 1")
             print("Successfully connected to Neo4j database")
         except Exception as e:
@@ -62,7 +66,11 @@ class Neo4jDatabase:
         if not self.driver:
             self.connect()
         
-        with self.driver.session() as session:
+        session_params = {}
+        if self.database:
+            session_params['database'] = self.database
+            
+        with self.driver.session(**session_params) as session:
             # Create constraint on Entity nodes
             session.run("""
                 CREATE CONSTRAINT entity_id IF NOT EXISTS
@@ -76,7 +84,11 @@ class Neo4jDatabase:
         if not self.driver:
             self.connect()
         
-        with self.driver.session() as session:
+        session_params = {}
+        if self.database:
+            session_params['database'] = self.database
+            
+        with self.driver.session(**session_params) as session:
             session.run("MATCH (n) DETACH DELETE n")
             print("Database cleared")
     

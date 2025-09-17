@@ -86,13 +86,13 @@ try:
         neo4j_password = st.secrets["neo4j"]["password"]
     else:
         # Fall back to environment variables
-        neo4j_uri = os.getenv("NEO4J_URI", "neo4j+s://7cbe2dae.databases.neo4j.io")
+        neo4j_uri = os.getenv("NEO4J_URI", "neo4j+s://7cbe2dae.databases.neo4j.io:7687")
         neo4j_user = os.getenv("NEO4J_USER", "8e5bfee5")
         neo4j_password = os.getenv("NEO4J_PASSWORD", "")
         neo4j_database = os.getenv("NEO4J_DATABASE", "7cbe2dae")
 except Exception as e:
     st.error(f"Error loading Neo4j credentials: {e}")
-    neo4j_uri = os.getenv("NEO4J_URI", "neo4j+s://7cbe2dae.databases.neo4j.io")
+    neo4j_uri = os.getenv("NEO4J_URI", "neo4j+s://7cbe2dae.databases.neo4j.io:7687")
     neo4j_user = os.getenv("NEO4J_USER", "8e5bfee5")
     neo4j_password = os.getenv("NEO4J_PASSWORD", "")
     neo4j_database = os.getenv("NEO4J_DATABASE", "7cbe2dae")
@@ -144,7 +144,7 @@ with st.sidebar:
         st.warning("❌ Not connected to Neo4j")
         
         # Connection form
-        neo4j_uri = st.text_input("Neo4j URI", value=os.getenv("NEO4J_URI", "neo4j+s://7cbe2dae.databases.neo4j.io"))
+        neo4j_uri = st.text_input("Neo4j URI", value=os.getenv("NEO4J_URI", "neo4j+s://7cbe2dae.databases.neo4j.io:7687"))
         neo4j_user = st.text_input("Neo4j User", value=os.getenv("NEO4J_USER", "8e5bfee5"))
         neo4j_password = st.text_input("Neo4j Password", value=os.getenv("NEO4J_PASSWORD", ""), type="password")
         neo4j_database = st.text_input("Neo4j Database", value=os.getenv("NEO4J_DATABASE", "7cbe2dae"))
