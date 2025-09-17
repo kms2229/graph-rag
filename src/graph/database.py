@@ -44,16 +44,19 @@ class Neo4jDatabase:
                 self.driver = GraphDatabase.driver(self.uri, auth=(self.user, self.password))
                 
             # Test connection
-            session_params = {}
-            if self.database:
-                session_params['database'] = self.database
-                
-            with self.driver.session(**session_params) as session:
+            with self._get_session() as session:
                 session.run("RETURN 1")
             print("Successfully connected to Neo4j database")
         except Exception as e:
             print(f"Failed to connect to Neo4j: {e}")
             raise
+    
+    def _get_session(self):
+        """Helper method to create a session with the correct database parameter"""
+        session_params = {}
+        if self.database:
+            session_params['database'] = self.database
+        return self.driver.session(**session_params)
     
     def close(self) -> None:
         """Close the database connection."""
