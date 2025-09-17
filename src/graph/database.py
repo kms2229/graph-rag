@@ -13,7 +13,7 @@ load_dotenv()
 class Neo4jDatabase:
     """Neo4j graph database connection and operations."""
     
-    def __init__(self, uri: Optional[str] = None, user: Optional[str] = None, password: Optional[str] = None):
+    def __init__(self, uri: Optional[str] = None, user: Optional[str] = None, password: Optional[str] = None, database: Optional[str] = None):
         """
         Initialize the Neo4j database connection.
         
@@ -21,17 +21,28 @@ class Neo4jDatabase:
             uri: Neo4j URI (defaults to environment variable)
             user: Neo4j username (defaults to environment variable)
             password: Neo4j password (defaults to environment variable)
+            database: Neo4j database name (for Aura instances)
         """
         self.uri = uri or os.getenv("NEO4J_URI", "bolt://localhost:7687")
         self.user = user or os.getenv("NEO4J_USER", "neo4j")
         self.password = password or os.getenv("NEO4J_PASSWORD", "password")
+        self.database = database or os.getenv("NEO4J_DATABASE", None)
         
         self.driver = None
         
     def connect(self) -> None:
         """Establish connection to Neo4j database."""
         try:
-            self.driver = GraphDatabase.driver(self.uri, auth=(self.user, self.password))
+            # Create driver with database parameter if specified
+            if self.database:
+                self.driver = GraphDatabase.driver(
+                    self.uri, 
+                    auth=(self.user, self.password),
+                    database=self.database
+                )
+            else:
+                self.driver = GraphDatabase.driver(self.uri, auth=(self.user, self.password))
+                
             # Test connection
             with self.driver.session() as session:
                 session.run("RETURN 1")

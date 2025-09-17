@@ -78,9 +78,24 @@ if "graph" not in st.session_state:
     st.session_state.graph = None
     
 # Attempt to connect to Neo4j automatically on startup
-neo4j_uri = os.getenv("NEO4J_URI", "bolt://localhost:7687")
-neo4j_user = os.getenv("NEO4J_USER", "neo4j")
-neo4j_password = os.getenv("NEO4J_PASSWORD", "")
+# Try to get credentials from secrets first (for Streamlit Cloud)
+try:
+    if "neo4j" in st.secrets:
+        neo4j_uri = st.secrets["neo4j"]["uri"]
+        neo4j_user = st.secrets["neo4j"]["user"]
+        neo4j_password = st.secrets["neo4j"]["password"]
+    else:
+        # Fall back to environment variables
+        neo4j_uri = os.getenv("NEO4J_URI", "neo4j+s://7cbe2dae.databases.neo4j.io")
+        neo4j_user = os.getenv("NEO4J_USER", "8e5bfee5")
+        neo4j_password = os.getenv("NEO4J_PASSWORD", "")
+        neo4j_database = os.getenv("NEO4J_DATABASE", "7cbe2dae")
+except Exception as e:
+    st.error(f"Error loading Neo4j credentials: {e}")
+    neo4j_uri = os.getenv("NEO4J_URI", "neo4j+s://7cbe2dae.databases.neo4j.io")
+    neo4j_user = os.getenv("NEO4J_USER", "8e5bfee5")
+    neo4j_password = os.getenv("NEO4J_PASSWORD", "")
+    neo4j_database = os.getenv("NEO4J_DATABASE", "7cbe2dae")
 
 # Only try to connect if we have credentials
 if neo4j_uri and neo4j_user and neo4j_password and not st.session_state.neo4j_connected:
@@ -88,7 +103,8 @@ if neo4j_uri and neo4j_user and neo4j_password and not st.session_state.neo4j_co
         st.session_state.db = Neo4jDatabase(
             uri=neo4j_uri,
             user=neo4j_user,
-            password=neo4j_password
+            password=neo4j_password,
+            database=neo4j_database
         )
         st.session_state.db.connect()
         st.session_state.neo4j_connected = True
@@ -128,16 +144,18 @@ with st.sidebar:
         st.warning("❌ Not connected to Neo4j")
         
         # Connection form
-        neo4j_uri = st.text_input("Neo4j URI", value=os.getenv("NEO4J_URI", "bolt://localhost:7687"))
-        neo4j_user = st.text_input("Neo4j User", value=os.getenv("NEO4J_USER", "neo4j"))
+        neo4j_uri = st.text_input("Neo4j URI", value=os.getenv("NEO4J_URI", "neo4j+s://7cbe2dae.databases.neo4j.io"))
+        neo4j_user = st.text_input("Neo4j User", value=os.getenv("NEO4J_USER", "8e5bfee5"))
         neo4j_password = st.text_input("Neo4j Password", value=os.getenv("NEO4J_PASSWORD", ""), type="password")
+        neo4j_database = st.text_input("Neo4j Database", value=os.getenv("NEO4J_DATABASE", "7cbe2dae"))
         
         if st.button("Connect to Neo4j"):
             try:
                 st.session_state.db = Neo4jDatabase(
                     uri=neo4j_uri,
                     user=neo4j_user,
-                    password=neo4j_password
+                    password=neo4j_password,
+                    database=neo4j_database
                 )
                 st.session_state.db.connect()
                 st.session_state.neo4j_connected = True
