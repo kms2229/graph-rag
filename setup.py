@@ -33,6 +33,8 @@ setup(
         # RAG components
         "langchain>=0.1.0",
         "langchain-community>=0.0.13",
+        "langchain-openai>=0.0.2",
+        "openai>=1.0.0",
         
         # Visualization
         "matplotlib>=3.8.0",
