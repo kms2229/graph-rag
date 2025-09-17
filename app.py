@@ -84,18 +84,24 @@ try:
         neo4j_uri = st.secrets["neo4j"]["uri"]
         neo4j_user = st.secrets["neo4j"]["user"]
         neo4j_password = st.secrets["neo4j"]["password"]
+        neo4j_database = st.secrets["neo4j"].get("database", None)
     else:
         # Fall back to environment variables
-        neo4j_uri = os.getenv("NEO4J_URI", "neo4j+s://7cbe2dae.databases.neo4j.io")
-        neo4j_user = os.getenv("NEO4J_USER", "8e5bfee5")
+        neo4j_uri = os.getenv("NEO4J_URI", "neo4j+s://9792f2c8.databases.neo4j.io")
+        neo4j_user = os.getenv("NEO4J_USER", "<username>")
         neo4j_password = os.getenv("NEO4J_PASSWORD", "")
-        neo4j_database = os.getenv("NEO4J_DATABASE", "7cbe2dae")
+        neo4j_database = os.getenv("NEO4J_DATABASE", "9792f2c8")
+        
+    # Make sure we're using the correct URI format for Neo4j Aura
+    if not neo4j_uri.startswith("neo4j+s://") and "databases.neo4j.io" in neo4j_uri:
+        neo4j_uri = f"neo4j+s://{neo4j_uri.split('://')[-1]}"
+        
 except Exception as e:
     st.error(f"Error loading Neo4j credentials: {e}")
-    neo4j_uri = os.getenv("NEO4J_URI", "neo4j+s://7cbe2dae.databases.neo4j.io")
-    neo4j_user = os.getenv("NEO4J_USER", "8e5bfee5")
+    neo4j_uri = os.getenv("NEO4J_URI", "neo4j+s://9792f2c8.databases.neo4j.io")
+    neo4j_user = os.getenv("NEO4J_USER", "<username>")
     neo4j_password = os.getenv("NEO4J_PASSWORD", "")
-    neo4j_database = os.getenv("NEO4J_DATABASE", "7cbe2dae")
+    neo4j_database = os.getenv("NEO4J_DATABASE", "9792f2c8")
 
 # Only try to connect if we have credentials
 if neo4j_uri and neo4j_user and neo4j_password and not st.session_state.neo4j_connected:

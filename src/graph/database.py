@@ -33,19 +33,23 @@ class Neo4jDatabase:
     def connect(self) -> None:
         """Establish connection to Neo4j database."""
         try:
-            # Create driver with database parameter if specified
+            # Create driver without database parameter in the constructor
+            self.driver = GraphDatabase.driver(
+                self.uri, 
+                auth=(self.user, self.password)
+            )
+            
+            # Verify connectivity
+            self.driver.verify_connectivity()
+            
+            # Test connection with database parameter in session
             if self.database:
-                self.driver = GraphDatabase.driver(
-                    self.uri, 
-                    auth=(self.user, self.password),
-                    database=self.database
-                )
+                with self.driver.session(database=self.database) as session:
+                    session.run("RETURN 1")
             else:
-                self.driver = GraphDatabase.driver(self.uri, auth=(self.user, self.password))
-                
-            # Test connection
-            with self.driver.session() as session:
-                session.run("RETURN 1")
+                with self.driver.session() as session:
+                    session.run("RETURN 1")
+                    
             print("Successfully connected to Neo4j database")
         except Exception as e:
             print(f"Failed to connect to Neo4j: {e}")
@@ -62,7 +66,13 @@ class Neo4jDatabase:
         if not self.driver:
             self.connect()
         
-        with self.driver.session() as session:
+        # Create session with database parameter if specified
+        if self.database:
+            session = self.driver.session(database=self.database)
+        else:
+            session = self.driver.session()
+            
+        try:
             # Create constraint on Entity nodes
             session.run("""
                 CREATE CONSTRAINT entity_id IF NOT EXISTS
@@ -70,15 +80,22 @@ class Neo4jDatabase:
             """)
             
             print("Created constraints for knowledge graph")
+        finally:
+            session.close()
     
     def clear_database(self) -> None:
         """Clear all nodes and relationships in the database."""
         if not self.driver:
             self.connect()
         
-        with self.driver.session() as session:
-            session.run("MATCH (n) DETACH DELETE n")
-            print("Database cleared")
+        if self.database:
+            with self.driver.session(database=self.database) as session:
+                session.run("MATCH (n) DETACH DELETE n")
+                print("Database cleared")
+        else:
+            with self.driver.session() as session:
+                session.run("MATCH (n) DETACH DELETE n")
+                print("Database cleared")
     
     def import_entities(self, entities_df: pd.DataFrame) -> None:
         """
@@ -93,7 +110,13 @@ class Neo4jDatabase:
         # Convert DataFrame to list of dictionaries
         entities = entities_df.to_dict('records')
         
-        with self.driver.session() as session:
+        # Create session with database parameter if specified
+        if self.database:
+            session = self.driver.session(database=self.database)
+        else:
+            session = self.driver.session()
+            
+        try:
             # Use batching for better performance
             batch_size = 500
             for i in range(0, len(entities), batch_size):
@@ -109,6 +132,8 @@ class Neo4jDatabase:
                 """, {"batch": batch})
             
             print(f"Imported {len(entities)} entities")
+        finally:
+            session.close()
     
     def import_relationships(self, relationships_df: pd.DataFrame) -> None:
         """
@@ -123,7 +148,13 @@ class Neo4jDatabase:
         # Convert DataFrame to list of dictionaries
         relationships = relationships_df.to_dict('records')
         
-        with self.driver.session() as session:
+        # Create session with database parameter if specified
+        if self.database:
+            session = self.driver.session(database=self.database)
+        else:
+            session = self.driver.session()
+            
+        try:
             # Use batching for better performance
             batch_size = 500
             for i in range(0, len(relationships), batch_size):
@@ -139,6 +170,8 @@ class Neo4jDatabase:
                 """, {"batch": batch})
             
             print(f"Imported {len(relationships)} relationships")
+        finally:
+            session.close()
     
     def import_knowledge_graph(self, entities_path: str, relationships_path: str) -> None:
         """
@@ -173,9 +206,17 @@ class Neo4jDatabase:
         if not self.driver:
             self.connect()
         
-        with self.driver.session() as session:
+        # Create session with database parameter if specified
+        if self.database:
+            session = self.driver.session(database=self.database)
+        else:
+            session = self.driver.session()
+            
+        try:
             result = session.run(cypher_query, params or {})
             return [record.data() for record in result]
+        finally:
+            session.close()
     
     def get_entity_neighbors(self, entity_id: str, max_distance: int = 2) -> Dict[str, Any]:
         """
@@ -197,7 +238,13 @@ class Neo4jDatabase:
         LIMIT 100
         """
         
-        with self.driver.session() as session:
+        # Create session with database parameter if specified
+        if self.database:
+            session = self.driver.session(database=self.database)
+        else:
+            session = self.driver.session()
+            
+        try:
             result = session.run(cypher_query, {"entity_id": entity_id.lower()})
             
             # Process results into a format suitable for visualization
@@ -227,6 +274,8 @@ class Neo4jDatabase:
                 "nodes": nodes_list,
                 "relationships": relationships
             }
+        finally:
+            session.close()
     
     def semantic_search(self, query_embedding: List[float], top_k: int = 5) -> List[Dict[str, Any]]:
         """
@@ -252,10 +301,18 @@ class Neo4jDatabase:
         RETURN e.entity_id AS entity_id, e.text AS text, e.label AS label, similarity
         """
         
-        with self.driver.session() as session:
+        # Create session with database parameter if specified
+        if self.database:
+            session = self.driver.session(database=self.database)
+        else:
+            session = self.driver.session()
+            
+        try:
             result = session.run(cypher_query, {
                 "query_embedding": query_embedding,
                 "top_k": top_k
             })
             
             return [record.data() for record in result]
+        finally:
+            session.close()
