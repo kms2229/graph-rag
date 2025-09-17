@@ -18,21 +18,38 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.8",
     install_requires=[
+        # Core dependencies
         "networkx>=3.1",
-        "spacy>=3.7.2",
-        "numpy>=1.24.3",
-        "pandas>=2.0.3",
+        "numpy>=1.26.0",
+        "pandas>=2.2.0",
+        
+        # Graph database
         "neo4j>=5.14.1",
+        
+        # Vector embeddings
         "sentence-transformers>=2.2.2",
-        "langchain>=0.0.335",
+        
+        # RAG components
+        "langchain>=0.1.0",
         "langchain-community>=0.0.13",
-        "matplotlib>=3.7.3",
+        
+        # Visualization
+        "matplotlib>=3.8.0",
         "pyvis>=0.3.2",
+        
+        # Web interface
+        "streamlit>=1.32.0",
+        "streamlit-agraph>=0.0.45",
+        
+        # Utilities
         "tqdm>=4.66.1",
         "python-dotenv>=1.0.0",
+        
+        # NLP - install last to ensure dependencies are met
+        "spacy>=3.7.2",
     ],
+    python_requires=">=3.8,<3.14",
     entry_points={
         "console_scripts": [
             "graph-rag=cli:main",
